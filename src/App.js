@@ -37,7 +37,7 @@ class App extends Component {
 
         return (
             <div className="container">                
-                <Table arrayData={ this.state.characters } removeCharacter={this.removeCharacter} />              
+                <Table arrayData={ this.state.characters } removeCharacter={this.removeCharacter} />
                 <Form handleSubmit={this.handleSubmit}/>
             </div>
         )
@@ -52,11 +52,12 @@ class App extends Component {
             }),
         })
     }
-
+    //버튼을 누르면 App.js State의 Characters의 데이터 값이 변경되고 테이블에 Characters array가 들어감
     handleSubmit = character => {
         this.setState({
             characters:[...this.state.characters, character]
         })
+        //console.log(this.state.characters)
     }
 
 }

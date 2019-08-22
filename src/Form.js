@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { string } from 'postcss-selector-parser';
 
 class Form extends Component
 {
@@ -15,7 +16,7 @@ class Form extends Component
 
     render() {
         const { name, job } = this.state;
-      
+        
         return (
           <form>
             <label>Name</label>
@@ -36,7 +37,7 @@ class Form extends Component
     }
 
     handleChange = event =>{
-        const {name, value} = event.target
+        const {name, value} = event.target //input 타입을 가리킴
         this.setState({
             [name]: value,
         })
@@ -47,10 +48,5 @@ class Form extends Component
         this.setState(this.initialState)
     }
 }
-
-
-    
-    
-
 
 export default Form;

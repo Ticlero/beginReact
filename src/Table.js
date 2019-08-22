@@ -36,7 +36,7 @@ const TableBody = props => {
             </tr>
         )
     })
-
+    console.log(props.arrayData)
     return <tbody>{rows}</tbody>
 }
 
